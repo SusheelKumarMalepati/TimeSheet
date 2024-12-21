@@ -4,4 +4,4 @@ RUN mvn clean package -DskipTests
 FROM openjdk:17.0.1-jdk-slim
 COPY --from=build /target/TimeSheet-0.0.1-SNAPSHOT.jar TimeSheet.jar
 EXPOSE 8080
-ENTRYPOINT["java","-jar","TimeSheet.jar"]
+ENTRYPOINT ["java","-jar","TimeSheet.jar"]
