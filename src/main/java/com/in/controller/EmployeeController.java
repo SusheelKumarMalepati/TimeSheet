@@ -18,7 +18,7 @@ import com.in.service.EmployeeService;
 public class EmployeeController {
 	@Autowired
 	EmployeeService employeeService;
-	@GetMapping(path="employee/getAll")
+	@GetMapping(path="/employee/getAll")
 	public String getAllEmployeeDetails(Model model){
 		List<Employee> employees= employeeService.getAllEmployeeDetails();
 		model.addAttribute("employees", employees);
