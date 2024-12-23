@@ -56,6 +56,9 @@ public class TimeSheet {
 	public void setEmployee(Employee employee) {
 		this.employee = employee;
 	}
+	public TimeSheet() {
+		super();
+	}
 	public TimeSheet(Long timeSheetId, LocalDate startDate, LocalDate endDate, int hoursWorkedPerDay, int hoursWorked,
 			Employee employee) {
 		super();
