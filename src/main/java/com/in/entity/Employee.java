@@ -44,6 +44,9 @@ public class Employee {
 	public void setJobType(JobType jobType) {
 		this.jobType = jobType;
 	}
+	public Employee() {
+		super();
+	}
 	public Employee(Long employeeId, String employeeName, String employeeEmail, Long employeePhoneNumber,
 			JobType jobType) {
 		super();
