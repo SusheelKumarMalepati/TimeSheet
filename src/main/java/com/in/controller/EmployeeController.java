@@ -26,6 +26,10 @@ public class EmployeeController {
 		model.addAttribute("jobTypes", JobType.values());
 		return "employee";
 	}
+	@GetMapping("/test")
+	public String testPage() {
+	    return "test";  // Returns /WEB-INF/views/test.jsp
+	}
 	@PostMapping(path="/create")
 	public RedirectView createEmployee(@RequestParam("employeeId") Long employeeId,@RequestParam("employeeName") String employeeName,
 			@RequestParam("employeePhoneNumber") Long employeePhoneNumber,@RequestParam("employeeEmail") String employeeEmail,
