@@ -27,7 +27,6 @@ public class TimeSheetController {
 	@Autowired
 	EmployeeService employeeService;
 	@GetMapping(path="/getTimesheet/{employeeId}")
-	@ResponseBody
 	public String getTimeSheetOfEmployee(@PathVariable Long employeeId,Model model) throws EmployeeNotFoundException{
 		List<TimeSheet> timesheets = timeSheetService.getTimeSheetOfEmployee(employeeId);
 		Employee employee=employeeService.getEmployeeById(employeeId);
@@ -37,7 +36,6 @@ public class TimeSheetController {
 		return "timesheet";
 	}
 	@PostMapping(path="/submitTimesheet")
-	@ResponseBody
 	public RedirectView updateTimeSheet(@RequestParam LocalDate startDate,@RequestParam LocalDate endDate,
 			@RequestParam int hoursWorkedPerDay,@RequestParam Long employeeId) throws TimeSheetException  {
 		TimeSheet timeSheet=new TimeSheet();
